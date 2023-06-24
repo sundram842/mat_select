@@ -1,0 +1,17 @@
+<mat-form-field>
+  <mat-label *ngIf="!foodControl.value">Select a food</mat-label>
+  <mat-select [formControl]="foodControl" [disabled]="isDisabled">
+    <mat-option
+      *ngFor="let food of foods"
+      [value]="food.value"
+      [disabled]="food.disabled"
+    >
+      {{ food.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button (click)="logSelectedValue()">Log Selected Value</button>
+<button (click)="setSelectedValue()">Set value</button>
+<button (click)="toggleDisable()">Toggle Disable</button>
+<button (click)="disablePizzaOption()">Disable Pizza Option</button>
