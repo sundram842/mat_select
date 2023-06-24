@@ -1,0 +1,6 @@
+<mat-chip-list>
+  <mat-chip *ngFor="let chip of chips" [removable]="true" (removed)="removeChip(chip)">
+    {{ chip }}
+    <mat-icon matChipRemove>cancel</mat-icon>
+  </mat-chip>
+</mat-chip-list>
