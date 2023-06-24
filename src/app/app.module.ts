@@ -6,21 +6,26 @@ import { AppComponent } from './app.component';
 import { MetCheckComponent } from './met-check/met-check.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Mat2CheckComponent } from './mat2-check/mat2-check.component';
+import { CheckBoxComponent } from './check-box/check-box.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     MetCheckComponent,
-    Mat2CheckComponent
+    Mat2CheckComponent,
+    CheckBoxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
      MatSelectModule,
-     ReactiveFormsModule
+     ReactiveFormsModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,21 @@
+<div>
+  <mat-checkbox
+    (change)="$event ? masterToggle($event.checked) : null"
+    [checked]="allToggle"
+    [indeterminate]="!allToggle"
+  >
+  </mat-checkbox>
+</div>
+
+<div *ngFor="let subtask of subtasks">
+  <label>
+    <mat-checkbox
+      type="checkbox"
+      [checked]="selection.isSelected(subtask)"
+      (change)="toggleCompletion($event, subtask)"
+    ></mat-checkbox>
+    {{ subtask.name }}
+  </label>
+</div>
+
+<button (click)="printSlectedItem()">Slected Item</button>
