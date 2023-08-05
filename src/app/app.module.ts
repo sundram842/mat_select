@@ -13,7 +13,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsComponent } from './mat-chips/mat-chips.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatSteperComponent } from './mat-steper/mat-steper.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,9 @@ import { MatIconModule } from '@angular/material/icon';
     MetCheckComponent,
     Mat2CheckComponent,
     CheckBoxComponent,
-    MatChipsComponent
+    MatChipsComponent,
+    MatSteperComponent,
+    TableComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -34,6 +41,10 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     MatChipsModule,
     MatIconModule,
+    MatStepperModule,
+    MatInputModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
